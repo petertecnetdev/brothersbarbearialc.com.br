@@ -650,7 +650,7 @@
         barbersContainer.innerHTML = "";
         barbers.forEach((barber) => {
           const imageURL =
-            barber.avatar || (barbershop.logo ? "https://api.petertecnet.com.br/" + barbershop.logo : "barber.png");
+            barber.avatar || ("barber.png");
           const card = document.createElement("div");
           card.className = "col-12 col-md-3 mb-4";
           card.innerHTML = `
