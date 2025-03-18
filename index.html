@@ -3,38 +3,25 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <!-- Responsividade -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
-
-  <!-- Favicon (será atualizado dinamicamente via JS) -->
   <link rel="shortcut icon" id="dynamic-favicon" href="barber.png" type="image/x-icon" />
-
-  <!-- Metadados padrões com valores de fallback -->
   <title>Brothers Barbearia</title>
   <meta name="description" content="Bem-vindo à Brothers Barbearia. Experimente nossos serviços de excelência." />
   <meta name="author" content="Brothers Barbearia" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://brothersbarbearia.com.br" />
-
-  <!-- Open Graph -->
   <meta property="og:title" content="Brothers Barbearia" />
-  <meta property="og:description" content="Bem-vindo à Brothers Barbearia. Experimente nossos serviços de excelência." />
+  <meta property="og:description"
+    content="Bem-vindo à Brothers Barbearia. Experimente nossos serviços de excelência." />
   <meta property="og:image" content="barber.png" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:title" content="Brothers Barbearia" />
-  <meta name="twitter:description" content="Bem-vindo à Brothers Barbearia. Experimente nossos serviços de excelência." />
+  <meta name="twitter:description"
+    content="Bem-vindo à Brothers Barbearia. Experimente nossos serviços de excelência." />
   <meta name="twitter:image" content="barber.png" />
-
-  <!-- Schema Markup (atualizado dinamicamente via JS) -->
   <script type="application/ld+json" id="schema-markup">{}</script>
-
-  <!-- CSS personalizado -->
   <style>
-    /* RESET BÁSICO */
+    /* RESET */
     * {
       margin: 0;
       padding: 0;
@@ -46,12 +33,11 @@
       background-color: #000;
       color: #fff;
       scroll-behavior: smooth;
-      position: relative;
       min-height: 100vh;
       padding-top: 80px;
     }
 
-    /* Navbar fixa no topo */
+    /* Navbar */
     nav.navbar {
       background-color: #000;
       position: fixed;
@@ -59,7 +45,7 @@
       left: 0;
       width: 100%;
       z-index: 9999;
-      border-bottom: 2px solid #c8a06b;
+      border-bottom: 1px solid #c8a06b;
     }
 
     nav.navbar .navbar-brand img {
@@ -96,7 +82,7 @@
       filter: invert(1);
     }
 
-    /* Seções gerais */
+    /* Sections */
     section {
       padding: 60px 20px;
       position: relative;
@@ -109,8 +95,28 @@
       font-size: 2rem;
       color: #c8a06b;
       text-transform: uppercase;
-      letter-spacing: 2px;
       position: relative;
+      box-shadow: 0px 0px 20px 0px rgb(200 160 107);
+
+      border-radius: 30px;
+      padding: 5px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    }
+
+    .section-title:hover {
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: bold;
+      font-size: 2rem;
+      color: #c8a06b;
+      text-transform: uppercase;
+      position: relative;
+      box-shadow: 0px 0px 20px 2px rgb(200 160 107);
+
+      border-radius: 30px;
+      padding: 5px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .section-title::after {
@@ -123,7 +129,6 @@
       border-radius: 2px;
     }
 
-    /* Seção Home com Carousel de Descrição */
     #home {
       text-align: center;
     }
@@ -145,7 +150,7 @@
       min-width: 120px;
     }
 
-    /* Cards de Barbeiros com Background Dinâmico */
+    /* Barber Cards */
     .barber-card {
       position: relative;
       overflow: hidden;
@@ -153,6 +158,12 @@
       border-radius: 8px;
       min-height: 250px;
       border: 1px solid #c8a06b;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .barber-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(200, 160, 107, 0.3);
     }
 
     .barber-bg {
@@ -191,7 +202,7 @@
       color: #fff;
     }
 
-    /* Cards para Serviços/Produtos */
+    /* Price Cards */
     .price-card {
       background-color: #111;
       border: 1px solid #c8a06b;
@@ -228,7 +239,7 @@
       min-height: 50px;
     }
 
-    /* Botões */
+    /* Buttons */
     .btn-gold {
       background-color: #c8a06b;
       color: #000;
@@ -257,8 +268,8 @@
     }
 
     .whatsapp-btn {
-      background-color: #000;
-      color: #c8a06b;
+      background-color: #000000;
+      color: #ffffff;
       border: none;
       padding: 8px 12px;
       border-radius: 10px;
@@ -270,15 +281,19 @@
     }
 
     .whatsapp-btn:hover {
+
+      border: 1px solid #000000;
       background-color: #af905c;
       transform: scale(1.05);
+
+      color: #000000;
     }
 
     .whatsapp-btn i {
       margin-right: 5px;
     }
 
-    /* Seção de Contato com Background Dinâmico */
+    /* Contact Card */
     .contact-card {
       position: relative;
       overflow: hidden;
@@ -287,7 +302,7 @@
       min-height: 300px;
       margin-bottom: 40px;
       border: 1px solid #c8a06b;
-      color: #ffffff;
+      color: #fff;
     }
 
     .contact-bg {
@@ -321,7 +336,7 @@
 
     .contact-info .info-item i {
       font-size: 1.2rem;
-      color: #ffffff !important;
+      color: #fff !important;
     }
 
     .contact-info a {
@@ -333,31 +348,46 @@
       color: #fff;
     }
 
-    /* Botão flutuante de WhatsApp */
+    /* WhatsApp Button */
     .float-whatsapp {
       position: fixed;
       bottom: 20px;
       right: 20px;
       background-color: #000;
       color: #c8a06b;
-      border: 3px solid #c8a06b;
-      padding: 15px;
-      border-radius: 45%;
+      padding: 5px;
       text-align: center;
       font-size: 20px;
       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
       z-index: 999;
       transition: transform 0.3s ease, background-color 0.3s ease;
+      animation: blink 1.5s infinite;
     }
 
     .float-whatsapp:hover {
       transform: scale(1.1);
-      background-color: #af905c;
+      background-color: #000;
+      color: #fff;
+      border: 1px solid #af905c;
     }
 
     .float-whatsapp .whatsapp-icon {
       color: #23d366;
-      font-size: 1.5rem;
+      font-size: 25px;
+    }
+
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
 
     /* Footer */
@@ -365,7 +395,6 @@
       background-color: #000;
       color: #fff;
       padding: 20px;
-      position: relative;
       border-top: 2px solid #c8a06b;
       display: flex;
       justify-content: center;
@@ -387,14 +416,24 @@
       width: 30px;
       height: auto;
     }
+
+    /* Fade-in Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .fade-in.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg fade-in">
     <div class="container-fluid">
-      <!-- Apenas a Logo da barbearia -->
       <a class="navbar-brand d-flex align-items-center" href="#home">
         <img src="barber.png" alt="Logo da barbearia" id="navBarbershopLogo" class="img-fluid" />
       </a>
@@ -404,30 +443,21 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#barbersSection">Barbeiros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#servicesSection">Serviços</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contactSection">Contato</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://rasoio.petertecnet.com.br/appointment/create/brothersbarbearia">Agendamentos</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="#barbersSection">Barbeiros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicesSection">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contactSection">Contato</a></li>
+          <li class="nav-item"><a class="nav-link"
+              href="https://rasoio.petertecnet.com.br/appointment/create/brothersbarbearia">Agendamentos</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Seção Home: Título e Carousel de Descrição -->
-  <section id="home">
+  <section id="home" class="fade-in">
     <div class="container">
       <p class="section-title h1" id="barbershopTitle">Brothers Barbearia</p>
       <div id="descriptionCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner" id="carouselInner">
-          <!-- Slides serão injetados via JS -->
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#descriptionCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -441,62 +471,39 @@
     </div>
   </section>
 
-  <!-- Seção de Barbeiros -->
-  <section id="barbersSection">
+  <section id="barbersSection" class="fade-in">
     <div class="container">
       <p class="section-title h1">Barbeiros</p>
-      <div class="row" id="barbersContainer">
-        <!-- Cards de barbeiros gerados via JS -->
-      </div>
+      <div class="row" id="barbersContainer"></div>
     </div>
   </section>
 
-  <!-- Seção de Serviços/Produtos -->
-  <section id="servicesSection">
+  <section id="servicesSection" class="fade-in">
     <div class="container">
       <p class="section-title">Serviços</p>
-      <div class="row" id="servicesContainer">
-        <!-- Cards de serviços gerados via JS -->
-      </div>
-      <div class="row" id="productsContainer">
-        <!-- Cards de produtos gerados via JS -->
-      </div>
+      <div class="row" id="servicesContainer"></div>
+      <div class="row" id="productsContainer"></div>
     </div>
   </section>
 
-  <!-- Seção de Contato com Background Dinâmico (usando a logo da barbearia) -->
-  <section id="contactSection">
+  <section id="contactSection" class="fade-in">
     <div class="container">
       <p class="section-title h2">Contato</p>
       <div class="row justify-content-center">
         <div class="col-md-8">
           <div class="contact-card card">
-            <!-- O background será atualizado via JS com a logo da barbearia -->
             <div class="contact-bg" id="contactBg" style="background-image: url('barber.png');"></div>
             <div class="contact-overlay">
               <div class="contact-info">
-                <div class="info-item">
-                  <i class="bi bi-telephone-fill"></i>
-                  <strong>Telefone:</strong>
-                  <span id="barbershopPhone"></span>
-                </div>
-                <div class="info-item">
-                  <i class="bi bi-envelope-fill"></i>
-                  <strong>Email:</strong>
-                  <span id="barbershopEmail"></span>
-                </div>
-                <div class="info-item">
-                  <i class="bi bi-geo-alt-fill"></i>
-                  <strong>Endereço:</strong>
-                  <span id="barbershopAddress"></span>,
-                  <span id="barbershopCity"></span> -
-                  <span id="barbershopState"></span>
-                </div>
-                <div class="info-item">
-                  <i class="bi bi-instagram"></i>
-                  <strong>Instagram:</strong>
-                  <a href="#" target="_blank" id="barbershopInstagram">Visitar</a>
-                </div>
+                <div class="info-item"><i class="bi bi-telephone-fill"></i><strong>Telefone:</strong><span
+                    id="barbershopPhone"></span></div>
+                <div class="info-item"><i class="bi bi-envelope-fill"></i><strong>Email:</strong><span
+                    id="barbershopEmail"></span></div>
+                <div class="info-item"><i class="bi bi-geo-alt-fill"></i><strong>Endereço:</strong><span
+                    id="barbershopAddress"></span>, <span id="barbershopCity"></span> - <span
+                    id="barbershopState"></span></div>
+                <div class="info-item"><i class="bi bi-instagram"></i><strong>Instagram:</strong><a href="#"
+                    target="_blank" id="barbershopInstagram">Visitar</a></div>
               </div>
               <div class="text-center mt-3">
                 <button class="btn-gold btn" id="locationBtn">Ver Localização</button>
@@ -508,67 +515,46 @@
     </div>
   </section>
 
-  <!-- Botão flutuante de WhatsApp (contato geral) -->
-  <a href="#" class="float-whatsapp" id="floatWhatsAppBtn" target="_blank" title="Fale conosco pelo WhatsApp">
-    <i class="bi bi-whatsapp whatsapp-icon"></i>
+  <a href="#" class="float-whatsapp fade-in" id="floatWhatsAppBtn" target="_blank" title="Fale conosco pelo WhatsApp">
+    <button class="btn btn-gold carousel-whatsapp"><i class="bi bi-whatsapp"></i></button>
   </a>
 
-  <!-- Footer -->
-  <footer>
+  <footer class="fade-in">
     <a href="https://petertecnet.com.br" target="_blank">Desenvolvido por Peter Tecnet</a>
     <img src="https://petertecnet.com.br/logo.png" alt="Logo da Peter Tecnet" class="peter-logo" />
   </footer>
 
-  <!-- Bootstrap JS + Icons -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-
-  <!-- Script para buscar dados da API e preencher a página -->
   <script>
     const apiURL = "https://api.petertecnet.com.br/api/barbershop/view/brothersbarbearia";
-
     async function loadBarbershopData() {
       try {
         const response = await fetch(apiURL);
         const data = await response.json();
         if (!data.barbershop) return;
-
         const { barbershop, services, products, barbers } = data;
-
-        // Atualiza os metadados e título
         document.title = barbershop.meta_title || barbershop.name;
         document.querySelector('meta[name="description"]').setAttribute("content", barbershop.meta_description || "");
         document.querySelector('meta[name="author"]').setAttribute("content", barbershop.meta_author || "");
         document.querySelector('meta[name="robots"]').setAttribute("content", barbershop.meta_robots || "");
         document.querySelector("link[rel='canonical']").setAttribute("href", barbershop.canonical_url || "");
-
-        // Open Graph
         document.querySelector('meta[property="og:title"]').setAttribute("content", barbershop.og_title || "");
         document.querySelector('meta[property="og:description"]').setAttribute("content", barbershop.og_description || "");
         document.querySelector('meta[property="og:image"]').setAttribute("content", barbershop.og_image || "");
-
-        // Twitter
         document.querySelector('meta[name="twitter:title"]').setAttribute("content", barbershop.twitter_title || "");
         document.querySelector('meta[name="twitter:description"]').setAttribute("content", barbershop.twitter_description || "");
         document.querySelector('meta[name="twitter:image"]').setAttribute("content", barbershop.twitter_image || "");
-
-        // Schema Markup
         if (barbershop.schema_markup) {
           document.getElementById("schema-markup").textContent = barbershop.schema_markup;
         }
-
-        // Favicon
         const favicon = document.getElementById("dynamic-favicon");
         if (barbershop.logo) {
           favicon.href = "https://api.petertecnet.com.br/" + barbershop.logo;
         }
-
-        // Atualiza informações principais (apenas logo no Nav e títulos)
         const navLogo = document.getElementById("navBarbershopLogo");
         const barbershopTitleEl = document.getElementById("barbershopTitle");
         barbershopTitleEl.textContent = barbershop.name;
-
-        // Preenche o Carousel de Descrição
         if (barbershop.description) {
           const paragraphs = barbershop.description.split("\n\n");
           const carouselInner = document.getElementById("carouselInner");
@@ -579,17 +565,12 @@
                   <p class="description-paragraph">${para}</p>
                   <div class="carousel-buttons text-center mt-3">
                     <button class="btn btn-outline-gold carousel-location">Localização</button>
-                    <button class="btn btn-gold carousel-whatsapp">
-                      <i class="bi bi-whatsapp"></i> WhatsApp
-                    </button>
-                    <button class="btn btn-outline-gold carousel-instagram">
-                      <i class="bi bi-instagram"></i> Instagram
-                    </button>
+                    <button class="btn btn-gold carousel-whatsapp"><i class="bi bi-whatsapp"></i> WhatsApp</button>
+                    <button class="btn btn-outline-gold carousel-instagram"><i class="bi bi-instagram"></i> Instagram</button>
                   </div>
                 </div>
               `;
           });
-          // Adiciona event listeners para os botões do carrossel
           document.querySelectorAll(".carousel-location").forEach((btn) => {
             btn.addEventListener("click", () => {
               if (barbershop.location) {
@@ -612,15 +593,11 @@
             });
           });
         }
-
-        // Atualiza logo no Nav e background da seção de Contato
         if (barbershop.logo) {
           const logoURL = "https://api.petertecnet.com.br/" + barbershop.logo;
           navLogo.src = logoURL;
           document.getElementById("contactBg").style.backgroundImage = `url('${logoURL}')`;
         }
-
-        // Preenche os dados de Contato
         document.getElementById("barbershopPhone").textContent = barbershop.phone || "";
         document.getElementById("barbershopEmail").textContent = barbershop.email || "";
         document.getElementById("barbershopAddress").textContent = barbershop.address || "";
@@ -628,29 +605,22 @@
         document.getElementById("barbershopState").textContent = barbershop.state || "";
         const instagramLink = document.getElementById("barbershopInstagram");
         instagramLink.href = barbershop.instagram || "#";
-
-        // Localização
         const locationBtn = document.getElementById("locationBtn");
         locationBtn.addEventListener("click", () => {
           if (barbershop.location) {
             window.open(barbershop.location, "_blank");
           }
         });
-
-        // Botão flutuante de WhatsApp (contato geral)
         const floatWhatsAppBtn = document.getElementById("floatWhatsAppBtn");
         if (barbershop.phone) {
           floatWhatsAppBtn.href = `https://api.whatsapp.com/send?phone=${barbershop.phone}&text=Olá! Gostaria de mais informações.`;
         } else {
           floatWhatsAppBtn.style.display = "none";
         }
-
-        // Lista de barbeiros com background personalizado
         const barbersContainer = document.getElementById("barbersContainer");
         barbersContainer.innerHTML = "";
         barbers.forEach((barber) => {
-          const imageURL =
-            barber.avatar || ("barber.png");
+          const imageURL = barber.avatar || "barber.png";
           const card = document.createElement("div");
           card.className = "col-12 col-md-3 mb-4";
           card.innerHTML = `
@@ -665,8 +635,6 @@
             `;
           barbersContainer.appendChild(card);
         });
-
-        // Lista de serviços
         const servicesContainer = document.getElementById("servicesContainer");
         servicesContainer.innerHTML = "";
         services.forEach((service) => {
@@ -679,15 +647,11 @@
                 <div class="price-title">${service.name}</div>
                 <div class="price-value">R$ ${service.price}</div>
                 <div class="price-description">${service.description}</div>
-                <button class="whatsapp-btn" onclick="window.open('${whatsappLink}', '_blank')">
-                  <i class="bi bi-whatsapp"></i> Quero mais informações
-                </button>
+                <button class="whatsapp-btn" onclick="window.open('${whatsappLink}', '_blank')"><i class="bi bi-whatsapp"></i> Quero mais informações</button>
               </div>
             `;
           servicesContainer.appendChild(col);
         });
-
-        // Lista de produtos
         const productsContainer = document.getElementById("productsContainer");
         productsContainer.innerHTML = "";
         products.forEach((product) => {
@@ -700,9 +664,7 @@
                 <div class="price-title">${product.name}</div>
                 <div class="price-value">R$ ${product.price}</div>
                 <div class="price-description">${product.description}</div>
-                <button class="whatsapp-btn" onclick="window.open('${whatsappLink}', '_blank')">
-                  <i class="bi bi-whatsapp"></i> Quero mais informações
-                </button>
+                <button class="whatsapp-btn" onclick="window.open('${whatsappLink}', '_blank')"><i class="bi bi-whatsapp"></i> Quero mais informações</button>
               </div>
             `;
           productsContainer.appendChild(col);
@@ -712,7 +674,29 @@
       }
     }
 
-    document.addEventListener("DOMContentLoaded", loadBarbershopData);
+    document.addEventListener("DOMContentLoaded", () => {
+      loadBarbershopData();
+
+      // Fade-in on scroll
+      const faders = document.querySelectorAll(".fade-in");
+      const appearOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+      };
+
+      const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("appear");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, appearOptions);
+
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+    });
   </script>
 </body>
 
